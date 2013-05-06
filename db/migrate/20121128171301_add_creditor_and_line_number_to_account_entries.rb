@@ -25,8 +25,8 @@ class AddCreditorAndLineNumberToAccountEntries < ActiveRecord::Migration
     end
     
 
-    add_column :account_entries, :creditor, :boolean, :null => false, :default => 0
-    add_column :account_entries, :line_number, :integer, :null => false, :default => 0
+    add_column :account_entries, :creditor, :boolean, :null => false, :default => '0'
+    add_column :account_entries, :line_number, :integer, :null => false, :default => '0'
 
     prev_deal_id = nil
     for entry_id, deal_id, amount in execute "SELECT id, deal_id, amount FROM account_entries WHERE type = 'Entry::General' ORDER BY deal_id, id"

@@ -5,15 +5,15 @@ gem 'rails', '3.2.12'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+gem 'pg'
 
 gem 'nokogiri' # for jpmobile
 gem 'jpmobile'
 gem 'prototype-rails', :git => 'git://github.com/rails/prototype-rails.git'
 gem 'html5jp_graphs'
 gem 'dynamic_form'
-gem 'therubyracer', '0.11.1'
-gem 'libv8', '~> 3.11.8.7'
+gem 'therubyracer', '0.11.1', :platform => :ruby
+gem 'libv8', '~> 3.11.8.7', :platform => :ruby
 gem 'passenger'
 
 group :assets do
